@@ -666,9 +666,193 @@ footer {
 }
 
 .announcement-banner {
-  background-color: var(--success);
+  background: linear-gradient(110deg, #0f766e, #0ea5a4);
   color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 18px rgba(15, 118, 110, 0.2);
+}
+
+.announcement-banner-empty {
+  background: linear-gradient(110deg, #475569, #64748b);
+  box-shadow: 0 8px 18px rgba(71, 85, 105, 0.2);
+}
+
+.announcement-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.announcement-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.announcement-text {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.announcement-meta {
+  font-size: 0.78rem;
+  opacity: 0.9;
+}
+
+#user-info {
+  gap: 8px;
+}
+
+#manage-announcements-button {
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+#manage-announcements-button:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.announcements-modal-content {
+  max-width: 760px;
+  width: 95%;
+}
+
+.announcements-subtitle {
+  margin-bottom: 14px;
+  color: var(--text-secondary);
+}
+
+.close-announcements-modal {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.announcement-form {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.announcement-form textarea,
+.announcement-form input[type="date"] {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.88rem;
+  font-family: inherit;
+}
+
+.announcement-form textarea:focus,
+.announcement-form input[type="date"]:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 2px rgba(83, 75, 174, 0.12);
+}
+
+.announcement-dates-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.announcement-form-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.secondary-button {
+  background: #e2e8f0;
+  color: #1f2937;
+}
+
+.secondary-button:hover {
+  background: #cbd5e1;
+}
+
+.announcements-list-wrapper h4 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.announcements-list {
+  display: grid;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.announcement-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.announcement-item-message {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.announcement-item-dates {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.announcement-item-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.announcement-edit {
+  background: var(--primary);
+}
+
+.announcement-delete {
+  background: #c62828;
+}
+
+.announcement-delete:hover {
+  background: #b71c1c;
+}
+
+.empty-announcements {
+  color: var(--text-secondary);
   text-align: center;
-  padding: 15px;
-  font-weight: bold;
+  padding: 10px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+  #user-controls {
+    position: static;
+    margin-top: 10px;
+  }
+
+  #user-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .announcement-dates-row {
+    grid-template-columns: 1fr;
+  }
 }
